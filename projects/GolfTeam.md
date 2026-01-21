@@ -1,7 +1,7 @@
 ---
 layout: project
 type: project
-image: img/micromouse/micromouse-square.jpg
+image: istockphoto-1454927838-612x612.jpg
 title: "High School Varsity Golf Team"
 date: 2024-02-12
 published: true
