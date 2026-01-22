@@ -1,7 +1,7 @@
 ---
 layout: project
 type: project
-image: img/istockphoto-1454927838-300x200.jpg
+image: img/UHEsports_400x400.jpg
 title: "UH Manoa Esports Team"
 date: 2025-03-22
 published: true
@@ -12,7 +12,7 @@ labels:
 summary: "Participated/Participate in the UH Esports Program for VALORANT."
 ---
 <div class="text-center p-4">
-  <img width="200px" src="../img/UHEsports_400x400.jpg" class="img-thumbnail" >
+  <img width="200px" src="../img/" class="img-thumbnail" >
 </div>
 Last year and this current year I am playing on the Varsity UHEsports team for VALORANT. Esports is essentially competetive gaming where I've participated in tournaments for money and trophies. The program helps me to get better at the game, my teamwork, and put effort into achieving something great.
 
