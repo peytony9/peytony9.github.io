@@ -1,7 +1,7 @@
 ---
 layout: project
 type: project
-image: img/UHEsports_300x300.jpg
+image: img/UHlogo.PNG
 title: "First Year College"
 date: 2025-01-5
 published: true
@@ -12,7 +12,7 @@ labels:
 summary: "Took multiple ICS classes in the first year of college balanced with other basic study classes."
 ---
 <div class="text-center p-4">
-  <img width="200px" src="../img/MeEsports.PNG" class="img-thumbnail" >
+  <img width="200px" src="../img/coding.PNG" class="img-thumbnail" >
 </div>
 
 Last year I took the classes ICS 111, 114, 214, and 211. These classes are mainly for the fundamentals of coding and runtimes. The coding language taught was Java where I learned basic coding such as loops, objects, classes, interfaces, etc. Had to get used to the higher level of education and it's pacing and structure.
