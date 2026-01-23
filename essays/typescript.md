@@ -10,7 +10,7 @@ labels:
   - Learning
 ---
 
-<img width="100px" class="rounded float-start pe-4" src="../img/TS_100x100">
+<img width="100px" class="rounded float-start pe-4" src="../img/TS_100x100.PNG">
 
 ## View on Typescript
 There are many different coding langauges when it comes to software engineering and I'm now learning typescript. This is my first time ever learning to code in Javascript or Typescript and so far it hasn't been a rough expierence. I've only really learned a bit of Java and C++ and I wouldn't say that typescript's syntax is super foreign compared to those two coding languages. The syntax being similar to what I know has allowed me to transfer my skills over in a way that hasn't had a whole lot of hiccups but I know I still have a lot to learn since I've already faced challenges and confusion but that's software engineering. I don't have a huge range of skill in software engineering but after learning typescript's basics, I find it to be a good programming language. I thought that the ES6 changes/add-ons were good for quality of life but I'm still adjusting to some of the syntax to be able to use it to it's full potential.
