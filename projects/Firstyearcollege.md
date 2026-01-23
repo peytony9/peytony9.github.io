@@ -2,7 +2,7 @@
 layout: project
 type: project
 image: img/UHlogo.PNG
-title: "First Year College"
+title: "First Year of College"
 date: 2025-01-5
 published: true
 labels:
