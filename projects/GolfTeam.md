@@ -9,7 +9,7 @@ labels:
   - Competitive Sports
   - Discipline
   - Perserverance
-summary: "I competed on the Kamehameha Schools High School Varsity team. Played in multiple tournaments while balancing school and life."
+summary: "Competed on the Kamehameha Schools High School Varsity team. Played in multiple tournaments while balancing school and life."
 ---
 
 <div class="text-center p-4">
