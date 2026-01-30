@@ -1,7 +1,7 @@
 ---
 layout: essay
 type: essay
-title: "What's a Good Question?"
+title: "Smart Question? What's a Smart Question?"
 # All dates must be YYYY-MM-DD format!
 date: 2026-01-29
 published: True
@@ -19,7 +19,6 @@ Everyone has their own questions and in a complicated line of work like software
 
 ## What’s a smart question?
 
-
 In search of a smart question, I explored through Stack Overflow which is a really useful question and answer website for software engineers. Stack Overflow is a great way for programmers to find answers to the issues they face in their coding and learn from their questions and answers of those around them. While most questions are smart questions, I searched through and found both a smart question and a "bad" question.
 
 The first example I found was of a smart question and I'd like to believe that this question being a good question is the reason it has the most votes on Stack Overflow. The asker was trying to figure out why a sorted array processes faster than an unsorted one.
@@ -29,22 +28,7 @@ Q: Why is processing a sorted array faster than processing an unsorted array?
 
 In this C++ code, sorting the data (before the timed region) makes the primary loop ~6x faster:
 
-#include <algorithm>
-#include <ctime>
-#include <iostream>
-
-int main()
-{
-    // Generate data
-    const unsigned arraySize = 32768;
-    int data[arraySize];
-
-    for (unsigned c = 0; c < arraySize; ++c)
-        data[c] = std::rand() % 256;
-
-    // !!! With this, the next loop runs faster.
-    std::sort(data, data + arraySize);
-
+    // After Data Generated
     // Test
     clock_t start = clock();
     long long sum = 0;
@@ -70,31 +54,14 @@ int main()
 
 Initially, I thought this might be just a language or compiler anomaly, so I tried Java:
 
-import java.util.Arrays;
-import java.util.Random;
-
-public class Main
-{
-    public static void main(String[] args)
-    {
-        // Generate data
-        int arraySize = 32768;
-        int data[] = new int[arraySize];
-
-        Random rnd = new Random(0);
-        for (int c = 0; c < arraySize; ++c)
-            data[c] = rnd.nextInt() % 256;
-
-        // !!! With this, the next loop runs faster
-        Arrays.sort(data);
-
-        // Test
-        long start = System.nanoTime();
-        long sum = 0;
-        for (int i = 0; i < 100000; ++i)
-        {
-            for (int c = 0; c < arraySize; ++c)
-            {   // Primary loop.
+    // After Date Generated
+    // Test
+      long start = System.nanoTime();
+      long sum = 0;
+      for (int i = 0; i < 100000; ++i)
+      {
+          for (int c = 0; c < arraySize; ++c)
+          {   // Primary loop.
                 if (data[c] >= 128)
                     sum += data[c];
             }
@@ -113,24 +80,25 @@ My first thought was that sorting brings the data into the cache, but that's sil
 
 The code is summing up some independent terms, so the order should not matter.
 ```
-The asker 
-## The foolproof way to get ignored.
+[Link to Stack Overflow Question](https://stackoverflow.com/questions/11227809/why-is-processing-a-sorted-array-faster-than-processing-an-unsorted-array)
+The asker received 26 answers to their question that brought a lot of insight about the reasoning they were encountering this bizzare "issue" and the reason they were receiving good answers was due to their good question. The question is straightforward as to what the asker's goal was and it's clear that they put it in time trying to figure it out on their own and since they made it precise and informative, they received precise and informative responses back.
 
-While there are decent questions that benefit everyone, there are those one can ask to create an entirely different effect. In the following example, a user asks how he would, in short, create a desktop application with Facebook.
+## What's an un-smart question?
+
+While it may seem like realistically a question could never be bad, there are cases. Some questions can be difficult to answer, not very insightful, not precise on what the goal of the question is, etc. It's hard to find not so smart questions on Stack Overflow so I asked ChatGPT to help me look for one and here's what I found:
 
 ```
-Q: Facebook Desktop Notifier
+Q: Is a sudden occurence of an unbearable desire to write some comments, a symptom of a bad design?
 
-I am a beginner programmer that have never used anything other than what's included in a language.
+Imagine... You have written some code; implemented some interfaces, used some design patterns, passed many unit tests, extracted many methods for sake of refactoring and so. You developed, developed, developed... But at some mysterious point, for some reason you, something inside you started to whisper you that you should write a comment now. Something pokes you that if you don't write a comment something will be missing or something can be not exactly clear...
 
-I am trying to create a desktop application that notifies me anytime I get an update onfacebook. 
-How should go about doing this? Thanks in advance.
+Then you comment your code! :(
 
-edit Sorry I was not clear. Is there any way to make a DESKTOP application with facebook?
+Can this be a secret sign of a bad design?
 ```
-
-A simple “yes” would have answered the question, but we know that’s not the sort of answer he or she is looking for. Fortunately, someone kindly responded with a link to Facebook’s developer website. The asker should have done more research on his or her potential project. Then further down the road, he or she could have asked more specific and detailed questions that wouldn’t require a thousand-paged response for a sufficient answer.
+[Link to the Stack Overflow Question](https://stackoverflow.com/questions/4450048/is-a-sudden-occurence-of-an-unbearable-desire-to-write-some-comments-a-symptom)
+This question and even the description are noticiably different from the first one. The question is ambiguous and has no clear goal leaving the responses left up purely to how the responder feels which isn't very precise and the asker probably didn't get very useful answers as the question is so open ended. The question is also not super related to the coding part of software engineering and instead focuses on just comments which is typically a personalized part of projects.
 
 ## Conclusion
 
-When we rely on others’ generosity and expertise to provide answers to our questions, it should hold that the question we ask should be one that leads to efficient and effective help that not only benefits us, but also the people we ask and others who might ask the same question in the future. Thus, if you have a question… make it a smart one! Asking questions may not always get you the best answer, but asking them in a way that will make others want to answer them will increase the success of finding a good solution and make it a positive experience on all sides.
+Questions answers are often in correlation with how "smart" the question is. I've realized the importance of smart questions and that questions should be very precise on what its goal is and it's important that the question is also clear and valid so that the answers can equally portray a clear precise answer to the question. Questions are one of the most important things in life as they often provide us with a lot of information so it's important to make our questions smart so that we can gain the most and the best answers for what we want to know.
