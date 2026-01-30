@@ -10,6 +10,8 @@ labels:
   - Learning
 ---
 
+<img width="300px" class="rounded float-start pe-4" src="../img/software.png">
+
 ## Growing up around Software Engineering
 From a young age, I've been surrounded by technology and its been a part of my life for a really long time. As I've grown up and learned more about how technology and computers work, I've become more interested in getting into the details and actually learning software engineering. Software engineering has become especially more interesting as more career paths open up due to the world constantly changing and moving toward a more technological reliant society. It's a subject that continues to grow leaving opportunity for new learning all the time which is perfect for a learning mindset.
 
