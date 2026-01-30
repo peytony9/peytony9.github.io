@@ -112,7 +112,8 @@ My first thought was that sorting brings the data into the cache, but that's sil
 - Why is processing a sorted array faster than processing an unsorted array?
 
 The code is summing up some independent terms, so the order should not matter.
-
+```
+The asker 
 ## The foolproof way to get ignored.
 
 While there are decent questions that benefit everyone, there are those one can ask to create an entirely different effect. In the following example, a user asks how he would, in short, create a desktop application with Facebook.
