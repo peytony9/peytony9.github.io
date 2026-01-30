@@ -1,10 +1,10 @@
 ---
 layout: essay
 type: essay
-title: "Smart Questions, Good Answers"
+title: "What's a Good Question?"
 # All dates must be YYYY-MM-DD format!
-date: 2015-09-08
-published: false
+date: 2026-01-29
+published: True
 labels:
   - Questions
   - Answers
@@ -13,69 +13,105 @@ labels:
 
 <img width="300px" class="rounded float-start pe-4" src="../img/smart-questions/rtfm.png">
 
-## Is there such thing as a stupid question?
+## The Importance of a Smart Question
 
-I’ve had instructors address a whole class and say, “There’s no such thing as a stupid question.” I now know that is in fact not true because I’ve challenged the statement and received the appropriate dumb-stricken, annoyed look. There are definitely stupid questions, and along with that, usually unhelpful answers. Though we all might be guilty of being callous and making people victim to our poorly formed questions, there are steps we can take to ask smarter questions that hopefully don’t illicit the dreaded “rtfm” or “stfw” response.
+Everyone has their own questions and in a complicated line of work like software engineering, questions constantly show up so it's crucial that these questions are smart questions. You may ask, what in the world is a "smart question"? A smart question consists of many different aspects such as effort, context, clarity, precision, and respect. Smart questions are just as if not more important for software engineering because coding languages can be complicated and problems can have many different solutions. The ability to ask smart questions is a crucial skill for collaboration, productivity, and learning in the software engineering work space and community.
 
 ## What’s a smart question?
 
-Stack Overflow, a question and answer site for programmers, is a great resource for anyone who may have issues with code or who may simply want to learn new or different methods of doing something. There I found examples of good questions and bad questions, which could probably be improved.
 
-In the following example, we examine the components of a decent question. In this case, the asker is trying to figure out a way to get the date of the previous month in Python.
+In search of a smart question, I explored through Stack Overflow which is a really useful question and answer website for software engineers. Stack Overflow is a great way for programmers to find answers to the issues they face in their coding and learn from their questions and answers of those around them. While most questions are smart questions, I searched through and found both a smart question and a "bad" question.
 
-```
-Q: python date of the previous month
-
-I am trying to get the date of the previous month with python. Here is what i've tried:
-
-str( time.strftime('%Y') ) + str( int(time.strftime('%m'))-1 )
-
-However, this way is bad for 2 reasons: First it returns 20122 for the February of 2012 (instead of 201202) 
-and secondly it will return 0 instead of 12 on January.
-
-I have solved this trouble in bash with:
-
-echo $(date -d"3 month ago" "+%G%m%d")
-
-I think that if bash has a built-in way for this purpose, then python, much more equipped, should provide something 
-better than forcing writing one's own script to achieve this goal. Of course i could do something like:
-
-if int(time.strftime('%m')) == 1:
-    return '12'
-else:
-    if int(time.strftime('%m')) < 10:
-        return '0'+str(time.strftime('%m')-1)
-    else:
-        return str(time.strftime('%m') -1)
-        
-I have not tested this code and i don't want to use it anyway (unless I can't find any other way:/)
-
-Thanks for your help!
-```
-
-While the heading of his question could be better, it does convey what he’s trying to figure out. Usually something as brief as “python date of previous month” is what other users would enter in as search terms on Google, making it easily found. Another good thing about the question is that it’s not just a question. The asker shows what he or she has done and that he or she has put in some effort to answer the question. And while it may not be as important as the question itself, the asker shows courtesy, which does increase the chance of getting an answer.
+The first example I found was of a smart question and I'd like to believe that this question being a good question is the reason it has the most votes on Stack Overflow. The asker was trying to figure out why a sorted array processes faster than an unsorted one.
 
 ```
-A: datetime and the datetime.timedelta classes are your friend.
+Q: Why is processing a sorted array faster than processing an unsorted array?
 
-1. find today
-2. use that to find the first day of this month.
-3. use timedelta to backup a single day, to the last day of the previous month.
-4. print the YYYYMM string you're looking for.
+In this C++ code, sorting the data (before the timed region) makes the primary loop ~6x faster:
 
-Like this:
+#include <algorithm>
+#include <ctime>
+#include <iostream>
 
- >>> import datetime
- >>> today = datetime.date.today()
- >>> first = datetime.date(day=1, month=today.month, year=today.year)
- >>> lastMonth = first - datetime.timedelta(days=1)
- >>> print lastMonth.strftime("%Y%m")
- 201202
- >>>
+int main()
+{
+    // Generate data
+    const unsigned arraySize = 32768;
+    int data[arraySize];
 
-```
- 
-The asker received six possible answers, and he or she was successful in inciting discussion from multiple users. The answers themselves were clear and were devoid of the rumored sarcasm and hostility of “hackers.” Since I myself have referenced this page and found it useful, I can confidently say that it is a good question.
+    for (unsigned c = 0; c < arraySize; ++c)
+        data[c] = std::rand() % 256;
+
+    // !!! With this, the next loop runs faster.
+    std::sort(data, data + arraySize);
+
+    // Test
+    clock_t start = clock();
+    long long sum = 0;
+    for (unsigned i = 0; i < 100000; ++i)
+    {
+        for (unsigned c = 0; c < arraySize; ++c)
+        {   // Primary loop.
+            if (data[c] >= 128)
+                sum += data[c];
+        }
+    }
+
+    double elapsedTime = static_cast<double>(clock()-start) / CLOCKS_PER_SEC;
+
+    std::cout << elapsedTime << '\n';
+    std::cout << "sum = " << sum << '\n';
+}
+
+- Without std::sort(data, data + arraySize);, the code runs in 11.54 seconds.
+- With the sorted data, the code runs in 1.93 seconds.
+
+(Sorting itself takes more time than this one pass over the array, so it's not actually worth doing if we needed to calculate this for an unknown array.)
+
+Initially, I thought this might be just a language or compiler anomaly, so I tried Java:
+
+import java.util.Arrays;
+import java.util.Random;
+
+public class Main
+{
+    public static void main(String[] args)
+    {
+        // Generate data
+        int arraySize = 32768;
+        int data[] = new int[arraySize];
+
+        Random rnd = new Random(0);
+        for (int c = 0; c < arraySize; ++c)
+            data[c] = rnd.nextInt() % 256;
+
+        // !!! With this, the next loop runs faster
+        Arrays.sort(data);
+
+        // Test
+        long start = System.nanoTime();
+        long sum = 0;
+        for (int i = 0; i < 100000; ++i)
+        {
+            for (int c = 0; c < arraySize; ++c)
+            {   // Primary loop.
+                if (data[c] >= 128)
+                    sum += data[c];
+            }
+        }
+
+        System.out.println((System.nanoTime() - start) / 1000000000.0);
+        System.out.println("sum = " + sum);
+    }
+}
+With a similar but less extreme result.
+
+My first thought was that sorting brings the data into the cache, but that's silly because the array was just generated.
+
+- What is going on?
+- Why is processing a sorted array faster than processing an unsorted array?
+
+The code is summing up some independent terms, so the order should not matter.
 
 ## The foolproof way to get ignored.
 
