@@ -11,7 +11,7 @@ labels:
   - StackOverflow
 ---
 
-<img width="300px" class="rounded float-start pe-4" src="../img/stack.png">
+<img width="200px" class="rounded float-start pe-4" src="../img/stack.png">
 
 ## The Importance of a Smart Question
 
