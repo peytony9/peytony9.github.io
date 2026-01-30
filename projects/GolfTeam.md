@@ -13,7 +13,7 @@ summary: "Competed on the Kamehameha Schools High School Varsity team. Played in
 ---
 
 <div class="text-center p-4">
-  <img width="200px" src="../img/golf2.PNG" class="img-thumbnail" >
+  <img width="300px" src="../img/golf2.PNG" class="img-thumbnail" >
 </div>
 
 This project/experience involved me playing in my highschool varsity golf team. I've played on this golf team since sophomore year of highschool all the way up to senior year. The tournaments were individual golf but scores were combined as a team so it still required a good team environment to learn and encourage each other. The golf team was focused on winning and making each other better through comments and comraderie.
