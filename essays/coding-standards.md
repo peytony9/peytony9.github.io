@@ -11,7 +11,7 @@ labels:
   - Learning
 ---
 
-<img width="200px" class="rounded float-start pe-4" src="../img/software.png">
+<img width="200px" class="rounded float-start pe-4" src="../img/eslint.png">
 
 ## What's a Coding Standard?
 First off, what even is a coding standard? My understanding of this topic is that a coding standard is a type of guideline set for programmers to write understandable, manageable, and correct code. These coding standards are usually things like how certain structures should be written, how to indent lines, rules for type safety, etc. They're often mutually agreed on and made to help developers with their respective coding language.
