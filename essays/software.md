@@ -4,7 +4,7 @@ type: essay
 title: "The Future of Software Engineering"
 # All dates must be YYYY-MM-DD format!
 date: 2026-01-21
-published: true
+published: false
 labels:
   - Software Engineering
   - Learning
