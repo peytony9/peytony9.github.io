@@ -32,3 +32,5 @@ it helped to make our parts more independent so that we can work individually on
 ## Conclusion
 Going into the project I don't think that we had these set "design patterns" when we started coding. Design patterns are something that are built through experience and time of coding and finding better and more efficient ways to create code just
 like how blueprints are constantly changing to create better places for society. The more we code, the more we gain experience and find new design patterns to implement to improve our programs.
+
+This essay was written by me with assistance of ChatGPT for ideas and clarity.
