@@ -10,7 +10,7 @@ labels:
   - Estimations
 ---
 
-<img width="200px" class="rounded float-start pe-4" src="../img/software.png">
+<img width="200px" class="rounded float-start pe-4" src="../img/effort.png">
 
 ## Creating Effort Estimates
 For me, a lot of my effort estimates were created using intuition based on my experience with coding. I’m not the most decorated programmer in any sense so I made sure to account for that when creating my effort estimates. Creating effort estimates had a few benefits for me and my group. It personally allowed me to divvy up time in my day that I would work on the project and plan to complete it in the estimated time. It also allowed my group to estimate how long issues would take so no one is picking up multiple hour long issues and working overtime on the project.
