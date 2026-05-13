@@ -8,7 +8,9 @@ published: true
 labels:
   - Software Engineering
   - Reflection
-  - 
+  - Coding Standards
+  - Agile Project Management
+  - Ethnics in Software Engineering
 ---
 
 <img width="200px" class="rounded float-start pe-4" src="../img/softwareengineering.png">
