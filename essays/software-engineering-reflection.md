@@ -13,7 +13,7 @@ labels:
   - Ethnics in Software Engineering
 ---
 
-<img width="200px" class="rounded float-start pe-4" src="../img/softwareengineering.png">
+<img width="200px" class="rounded float-start pe-4" src="../img/software2.png">
 
 ## Introduction
 Before ICS 314, I wasn't fully sure what software engineering entailed. I thought that this class was just going to be like any other class where I just learn about simple programming and learn to just build smaller programs. However, software
