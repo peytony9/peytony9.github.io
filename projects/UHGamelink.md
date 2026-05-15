@@ -1,7 +1,7 @@
 ---
 layout: project
 type: project
-image: img/UHGamelink.PNG
+image: img/UHGamelink.png
 title: "UH Gamelink"
 date: Spring 2026
 published: true
