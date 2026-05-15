@@ -18,7 +18,7 @@ labels:
 summary: "A web application that's responsive and public to assist University of Hawaii students to connect with other students based off of their gaming interests."
 ---
 <div class="text-center p-4">
-  <img width="200px" src="../img/gamelink.png" class="img-thumbnail" >
+  <img width="1000px" src="../img/gamelink.png" class="img-thumbnail" >
 </div>
 
 ## Summary
