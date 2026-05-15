@@ -43,5 +43,5 @@ UH GameLink was developed using modern full-stack web development technologies i
 ## What I Learned
 This experience allowed me and my group members to experience what it takes to build a web application to solve a real world issue that we spotted out. This project taught me the importance of agile project management when working in a group environment. Splitting a large amount of work up into pieces is a normal thing but this project helped me recognize how important it is when it comes to multiple programmers working together on a single code. It also helped me to better understand all the development environments we used like NextJs, Prisma, and Vercel. This project was important to get real world experience in programming and software engineering but it also was an opportunity to get experience in working in a group as I know most projects in the future won't just be on my own.
 
-View our site: [UH Gamelink][https://uh-gamelink.vercel.app/]
-View our github: [Github][https://github.com/uh-gamelink/uh-gamelink-app]
+View our site: [UH Gamelink](https://uh-gamelink.vercel.app/)
+View our github: [Github](https://github.com/uh-gamelink/uh-gamelink-app)
