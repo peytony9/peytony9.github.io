@@ -1,7 +1,7 @@
 ---
 layout: project
 type: project
-image: img/UHlogo.PNG
+image: img/UHGamelink.PNG
 title: "UH Gamelink"
 date: Spring 2026
 published: true
@@ -18,7 +18,7 @@ labels:
 summary: "A web application that's responsive and public to assist University of Hawaii students to connect with other students based off of their gaming interests."
 ---
 <div class="text-center p-4">
-  <img width="200px" src="../img/coding.PNG" class="img-thumbnail" >
+  <img width="200px" src="../img/gamelink.PNG" class="img-thumbnail" >
 </div>
 
 ## Summary
